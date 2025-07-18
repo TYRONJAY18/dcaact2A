@@ -63,12 +63,12 @@ public class tyron extends javax.swing.JFrame {
         label12 = new java.awt.Label();
         jComboBox4 = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
         label13 = new java.awt.Label();
         jTextField10 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
+        jTextField9 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -77,27 +77,33 @@ public class tyron extends javax.swing.JFrame {
         jLabel1.setText("Student Registration Form");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 22, -1, 38));
 
+        label1.setBackground(new java.awt.Color(255, 204, 204));
         label1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         label1.setText("Roll No:");
         getContentPane().add(label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 100, 30));
 
+        label2.setBackground(new java.awt.Color(255, 204, 204));
         label2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         label2.setText("Student Name:");
         getContentPane().add(label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 180, 30));
         label2.getAccessibleContext().setAccessibleName("");
 
+        label3.setBackground(new java.awt.Color(255, 204, 204));
         label3.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         label3.setText("Father\"s Name:");
         getContentPane().add(label3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
 
+        label4.setBackground(new java.awt.Color(255, 204, 204));
         label4.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         label4.setText("Date of Birth:");
         getContentPane().add(label4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
 
+        label5.setBackground(new java.awt.Color(255, 204, 204));
         label5.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         label5.setText("Mobile no. :");
         getContentPane().add(label5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, -1, -1));
 
+        label6.setBackground(new java.awt.Color(255, 204, 204));
         label6.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         label6.setText("Gender:");
         getContentPane().add(label6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, -1, -1));
@@ -138,15 +144,18 @@ public class tyron extends javax.swing.JFrame {
         getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 840, 380, 100));
         getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 340, 270, 40));
 
+        label7.setBackground(new java.awt.Color(255, 204, 204));
         label7.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         label7.setText("Email ID:");
         getContentPane().add(label7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, -1, -1));
         getContentPane().add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 400, 380, 40));
 
+        label8.setBackground(new java.awt.Color(255, 204, 204));
         label8.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         label8.setText("Course:");
         getContentPane().add(label8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 640, -1, -1));
 
+        label9.setBackground(new java.awt.Color(255, 204, 204));
         label9.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         label9.setText("Password:");
         getContentPane().add(label9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, -1, -1));
@@ -186,14 +195,17 @@ public class tyron extends javax.swing.JFrame {
         jCheckBox7.setActionCommand("");
         getContentPane().add(jCheckBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 580, 90, 40));
 
+        label10.setBackground(new java.awt.Color(255, 204, 204));
         label10.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         label10.setText("Student Photo:");
         getContentPane().add(label10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 700, -1, -1));
 
+        label11.setBackground(new java.awt.Color(255, 204, 204));
         label11.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         label11.setText("Address:");
         getContentPane().add(label11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 840, -1, -1));
 
+        label12.setBackground(new java.awt.Color(255, 204, 204));
         label12.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         label12.setText("Department:");
         getContentPane().add(label12, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 580, -1, -1));
@@ -204,10 +216,7 @@ public class tyron extends javax.swing.JFrame {
         jButton1.setText("Choose File");
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 710, 120, 30));
 
-        jLabel7.setText("No File Choosen");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 710, 110, 30));
-        getContentPane().add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 470, 380, 40));
-
+        label13.setBackground(new java.awt.Color(255, 204, 204));
         label13.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         label13.setText("City:");
         getContentPane().add(label13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 770, -1, -1));
@@ -217,17 +226,11 @@ public class tyron extends javax.swing.JFrame {
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 970, 100, 30));
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 204));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 470, 380, 40));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 890, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1020, Short.MAX_VALUE)
-        );
+        jLabel7.setText("No File Choosen");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 710, 110, 30));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 1020));
 
