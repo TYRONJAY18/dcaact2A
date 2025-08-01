@@ -121,7 +121,7 @@ public class Div extends javax.swing.JFrame {
          int y = Integer.parseInt(txtnum2.getText());
          //condition
          int sum = x / y ;
-         JOptionPane.showMessageDialog(null, "the sum of numbers is " + sum, "yahooooo", JOptionPane.INFORMATION_MESSAGE);
+         JOptionPane.showMessageDialog(null, "the sum of numbers is " + sum, "Division", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
