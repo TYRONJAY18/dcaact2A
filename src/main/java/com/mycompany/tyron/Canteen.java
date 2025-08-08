@@ -56,8 +56,10 @@ public class Canteen extends javax.swing.JFrame {
         txt1 = new javax.swing.JTextField();
         txt2 = new javax.swing.JTextField();
         txtcash = new javax.swing.JTextField();
-        btnChange = new javax.swing.JButton();
         btnselect = new javax.swing.JButton();
+        txtvat = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -65,12 +67,12 @@ public class Canteen extends javax.swing.JFrame {
         panel2.setBackground(new java.awt.Color(0, 255, 204));
         panel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         jLabel1.setText("CANTEEN");
-        panel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, -1, 52));
+        panel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, -1, 52));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel2.setText("SNUCKS");
+        jLabel2.setText("SNACKS");
         panel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -108,7 +110,6 @@ public class Canteen extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel11.setText("[3] BiteBuzz P 10.00");
         panel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, -1, -1));
-        jLabel11.getAccessibleContext().setAccessibleName("[3] BiteBuzz P 10.00");
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel12.setText("[10] FizzPop P 10.00");
@@ -169,22 +170,22 @@ public class Canteen extends javax.swing.JFrame {
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel14.setText("CHOOSE FROM THE MENU:");
-        panel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, 30));
+        panel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, -1, 30));
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel15.setText("QUANTITY:");
-        panel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, -1, 30));
+        panel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, -1, 30));
 
         lblorder.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         lblorder.setText("ORDER:");
-        panel1.add(lblorder, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 60, 190, 60));
+        panel1.add(lblorder, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, 190, 40));
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel16.setText("Amount:");
-        panel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 70, -1, 30));
-        panel1.add(txtchange, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 120, 120, 40));
-        panel1.add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 120, 40));
-        panel1.add(txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, 120, 40));
+        jLabel16.setText("Tax 12%");
+        panel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 30, -1, 30));
+        panel1.add(txtchange, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 130, 120, 40));
+        panel1.add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 20, 120, 40));
+        panel1.add(txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 80, 120, 40));
 
         txtcash.setEnabled(false);
         txtcash.addActionListener(new java.awt.event.ActionListener() {
@@ -192,17 +193,9 @@ public class Canteen extends javax.swing.JFrame {
                 txtcashActionPerformed(evt);
             }
         });
-        panel1.add(txtcash, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 70, 120, 40));
+        panel1.add(txtcash, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 80, 120, 40));
 
-        btnChange.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btnChange.setText("CHANGE");
-        btnChange.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnChangeActionPerformed(evt);
-            }
-        });
-        panel1.add(btnChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 180, 120, 40));
-
+        btnselect.setBackground(new java.awt.Color(255, 255, 0));
         btnselect.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnselect.setText("SELECT");
         btnselect.addActionListener(new java.awt.event.ActionListener() {
@@ -210,9 +203,18 @@ public class Canteen extends javax.swing.JFrame {
                 btnselectActionPerformed(evt);
             }
         });
-        panel1.add(btnselect, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 180, 120, 40));
+        panel1.add(btnselect, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 210, 120, 40));
+        panel1.add(txtvat, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 30, 120, 40));
 
-        getContentPane().add(panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 480, 950, 340));
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel17.setText("Amount:");
+        panel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 80, -1, 30));
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel18.setText("Change:");
+        panel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 130, -1, -1));
+
+        getContentPane().add(panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 950, 340));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -222,7 +224,7 @@ public class Canteen extends javax.swing.JFrame {
     }//GEN-LAST:event_txtcashActionPerformed
 
     private void btnselectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnselectActionPerformed
-    int x = Integer.parseInt(txt1.getText());
+        int x = Integer.parseInt(txt1.getText());
         int y = Integer.parseInt(txt2.getText());
         
         if (x == 1)
@@ -231,23 +233,60 @@ public class Canteen extends javax.swing.JFrame {
         lblorder.setText("Piatos");
         
          int Piatos = 13;
-        int results = y * Piatos;
+         int results = y * Piatos;
+         int change = results - x;
+         
+         JOptionPane.showMessageDialog(null, "Your order: Piatos"
+                 +"\n Price: P" + Piatos
+                 + "\nQuantity:" + y 
+                 + "\nTotal: P"+ results
+                 + "\nchange", "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
         
-         JOptionPane.showMessageDialog(null, "Your order is Piatos P"+results, "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
-        
-         txtcash.setText(""+results);
-        
-        }
-        
+         int choice = JOptionPane.showConfirmDialog(null, "do you want to change order", "receipt", JOptionPane.YES_NO_CANCEL_OPTION);
+          
+         if (choice == JOptionPane.YES_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "you can order again", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
+         else if (choice == JOptionPane.NO_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "No More Orders", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
+         else if (choice == JOptionPane.CANCEL_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "CANCELED", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
+         txtcash.setText(""+ results);
+         }
         else if(x == 2)
         {
          lblorder.setText("Nova");
         
          int Nova = 15;
          int results = y * Nova;
+        int change = results - x;
+          JOptionPane.showMessageDialog(null, "Your order: Piatos"
+                 +"\n Price: P" + Nova
+                 + "\nQuantity:" + y 
+                 + "\nTotal: P"+ results
+                 + "\nchange"+change, "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
         
-         JOptionPane.showMessageDialog(null, "Your order is Nova P"+results, "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
-        
+         int choice = JOptionPane.showConfirmDialog(null, "do you want to change order", "receipt", JOptionPane.YES_NO_CANCEL_OPTION);
+          
+         if (choice == JOptionPane.YES_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "you can order again", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
+         else if (choice == JOptionPane.NO_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "No More Orders", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
+         else if (choice == JOptionPane.CANCEL_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "CANCELED", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
+         txtcash.setText(""+ results);
+         
          txtcash.setText(""+results);
         
         }
@@ -361,15 +400,6 @@ public class Canteen extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnselectActionPerformed
 
-    private void btnChangeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChangeActionPerformed
-       
-        int x = Integer.parseInt(txtcash.getText());
-        int y = Integer.parseInt(txtchange.getText());
-        int change =  y - x;
-        
-         JOptionPane.showMessageDialog(null, "Change is "+change, "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
-    }//GEN-LAST:event_btnChangeActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -396,7 +426,6 @@ public class Canteen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnChange;
     private javax.swing.JButton btnselect;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -406,6 +435,8 @@ public class Canteen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -424,5 +455,6 @@ public class Canteen extends javax.swing.JFrame {
     private javax.swing.JTextField txt2;
     private javax.swing.JTextField txtcash;
     private javax.swing.JTextField txtchange;
+    private javax.swing.JTextField txtvat;
     // End of variables declaration//GEN-END:variables
 }
