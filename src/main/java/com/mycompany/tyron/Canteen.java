@@ -219,14 +219,10 @@ public class Canteen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtcashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcashActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtcashActionPerformed
-
     private void btnselectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnselectActionPerformed
         int x = Integer.parseInt(txt1.getText());
         int y = Integer.parseInt(txt2.getText());
-        
+        int v = Integer.parseInt(txtchange.getText());
         if (x == 1)
         {
         
@@ -234,13 +230,14 @@ public class Canteen extends javax.swing.JFrame {
         
          int Piatos = 13;
          int results = y * Piatos;
-         int change = results - x;
-         
+         int change = v - results;
+         double Vat = results * 0.12; 
          JOptionPane.showMessageDialog(null, "Your order: Piatos"
                  +"\n Price: P" + Piatos
-                 + "\nQuantity:" + y 
+                 + "\nQuantity:" + y
                  + "\nTotal: P"+ results
-                 + "\nchange", "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
+                 + "\nVat: P" + Vat
+                 + "\nchange: P" + change, "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
         
          int choice = JOptionPane.showConfirmDialog(null, "do you want to change order", "receipt", JOptionPane.YES_NO_CANCEL_OPTION);
           
@@ -264,12 +261,80 @@ public class Canteen extends javax.swing.JFrame {
         
          int Nova = 15;
          int results = y * Nova;
-        int change = results - x;
-          JOptionPane.showMessageDialog(null, "Your order: Piatos"
+         int change = v - results;
+         double Vat = results * 0.12; 
+          JOptionPane.showMessageDialog(null, "Your order: NOVA"
                  +"\n Price: P" + Nova
-                 + "\nQuantity:" + y 
+                 + "\nQuantity: " + y 
                  + "\nTotal: P"+ results
-                 + "\nchange"+change, "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
+                   + "\nVat: P" + Vat
+                 + "\nchange: P"+change, "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
+        
+         int choice = JOptionPane.showConfirmDialog(null, "do you want to change order", "receipt", JOptionPane.YES_NO_CANCEL_OPTION);
+          
+         if (choice == JOptionPane.YES_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "you can order again", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
+         else if (choice == JOptionPane.NO_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "No More Orders", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
+         else if (choice == JOptionPane.CANCEL_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "CANCELED", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }         
+         txtcash.setText(""+results);
+        
+        }
+        
+        else if(x == 3)
+        {
+         lblorder.setText("BiteBuzz");
+        
+         int Bite = 10;
+         int results = y * Bite;
+         int change = v - results;
+         double Vat = results * 0.12; 
+          JOptionPane.showMessageDialog(null, "Your order: BiteBuzz"
+                 +"\n Price: P" + Bite
+                 + "\nQuantity: " + y 
+                 + "\nTotal: P"+ results
+                 + "\nVat: P" + Vat
+                 + "\nchange: P"+change, "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
+        
+         int choice = JOptionPane.showConfirmDialog(null, "do you want to change order", "receipt", JOptionPane.YES_NO_CANCEL_OPTION);
+          
+         if (choice == JOptionPane.YES_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "you can order again", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
+         else if (choice == JOptionPane.NO_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "No More Orders", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
+         else if (choice == JOptionPane.CANCEL_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "CANCELED", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }         
+         txtcash.setText(""+results);
+        
+        }
+        
+        else if(x == 4)
+        {
+         lblorder.setText("Nibbly Nest");
+        
+         int Nibbly = 8;
+         int results = y * Nibbly;
+         int change = v - results;
+         double Vat = results * 0.12; 
+          JOptionPane.showMessageDialog(null, "Your order: Nibbly Nest"
+                 +"\n Price: P" + Nibbly
+                 + "\nQuantity: " + y
+                 + "\nTotal: P"+ results
+                 + "\nVat: P" + Vat
+                 + "\nchange: P"+change, "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
         
          int choice = JOptionPane.showConfirmDialog(null, "do you want to change order", "receipt", JOptionPane.YES_NO_CANCEL_OPTION);
           
@@ -285,34 +350,6 @@ public class Canteen extends javax.swing.JFrame {
          {
          JOptionPane.showMessageDialog(null, "CANCELED", "Receipt", JOptionPane.INFORMATION_MESSAGE);
          }
-         txtcash.setText(""+ results);
-         
-         txtcash.setText(""+results);
-        
-        }
-        
-        else if(x == 3)
-        {
-         lblorder.setText("BiteBuzz");
-        
-         int Bite = 10;
-         int results = y * Bite;
-        
-         JOptionPane.showMessageDialog(null, "Your order is BiteBuzz P"+results, "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
-        
-         txtcash.setText(""+results);
-        
-        }
-        
-        else if(x == 4)
-        {
-         lblorder.setText("Nibbly Nest");
-        
-         int Nibbly = 8;
-         int results = y * Nibbly;
-        
-         JOptionPane.showMessageDialog(null, "Your order is Nibbly Nest P"+results, "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
-        
          txtcash.setText(""+results);
         
         }
@@ -323,9 +360,29 @@ public class Canteen extends javax.swing.JFrame {
         
          int Pop  = 12;
          int results = y * Pop;
+         int change = v - results;
+         double Vat = results * 0.12; 
+          JOptionPane.showMessageDialog(null, "Your order: Pop & Crunch"
+                 +"\n Price: P" + Pop
+                 + "\nQuantity: " + y
+                 + "\nTotal: P"+ results
+                 + "\nVat: P" + Vat
+                 + "\nchange: P"+change, "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
         
-         JOptionPane.showMessageDialog(null, "Your order is Pop & Crunch  P"+results, "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
-        
+         int choice = JOptionPane.showConfirmDialog(null, "do you want to change order", "receipt", JOptionPane.YES_NO_CANCEL_OPTION);
+          
+         if (choice == JOptionPane.YES_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "you can order again", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
+         else if (choice == JOptionPane.NO_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "No More Orders", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
+         else if (choice == JOptionPane.CANCEL_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "CANCELED", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
          txtcash.setText(""+results);
         
         }
@@ -336,9 +393,29 @@ public class Canteen extends javax.swing.JFrame {
         
          int Coke = 25;
          int results = y * Coke;
+         int change = v - results;
+         double Vat = results * 0.12; 
+          JOptionPane.showMessageDialog(null, "Your order: Coke"
+                 +"\n Price: P" + Coke
+                 + "\nQuantity: " + y
+                 + "\nTotal: P"+ results
+                 + "\nVat: P" + Vat
+                 + "\nchange: P"+change, "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
         
-         JOptionPane.showMessageDialog(null, "Your order is Royal P"+results, "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
-        
+         int choice = JOptionPane.showConfirmDialog(null, "do you want to change order", "receipt", JOptionPane.YES_NO_CANCEL_OPTION);
+          
+         if (choice == JOptionPane.YES_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "you can order again", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
+         else if (choice == JOptionPane.NO_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "No More Orders", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
+         else if (choice == JOptionPane.CANCEL_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "CANCELED", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
          txtcash.setText(""+results);
         
         }
@@ -349,9 +426,29 @@ public class Canteen extends javax.swing.JFrame {
         
          int Royal = 20;
          int results = y * Royal;
+         int change = v - results;
+         double Vat = results * 0.12; 
+          JOptionPane.showMessageDialog(null, "Your order: Royal"
+                 +"\n Price: P" + Royal
+                 + "\nQuantity: " + y
+                 + "\nTotal: P"+ results
+                 + "\nVat: P" + Vat
+                 + "\nchange: P"+change, "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
         
-         JOptionPane.showMessageDialog(null, "Your order is Royal P"+results, "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
-        
+         int choice = JOptionPane.showConfirmDialog(null, "do you want to change order", "receipt", JOptionPane.YES_NO_CANCEL_OPTION);
+          
+         if (choice == JOptionPane.YES_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "you can order again", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
+         else if (choice == JOptionPane.NO_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "No More Orders", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
+         else if (choice == JOptionPane.CANCEL_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "CANCELED", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
          txtcash.setText(""+results);
         
         }
@@ -362,9 +459,29 @@ public class Canteen extends javax.swing.JFrame {
         
          int  FruitJuice = 15;
          int results = y *  FruitJuice;
+         int change = v - results;
+         double Vat = results * 0.12; 
+          JOptionPane.showMessageDialog(null, "Your order: FruitJuice"
+                 +"\n Price: P" + FruitJuice
+                 + "\nQuantity: " + y
+                 + "\nTotal: P"+ results
+                 + "\nVat: P" + Vat
+                 + "\nchange: P"+change, "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
         
-         JOptionPane.showMessageDialog(null, "Your order is  FruitJuice P"+results, "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
-        
+         int choice = JOptionPane.showConfirmDialog(null, "do you want to change order", "receipt", JOptionPane.YES_NO_CANCEL_OPTION);
+          
+         if (choice == JOptionPane.YES_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "you can order again", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
+         else if (choice == JOptionPane.NO_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "No More Orders", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
+         else if (choice == JOptionPane.CANCEL_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "CANCELED", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
          txtcash.setText(""+results);
         
         }
@@ -375,9 +492,29 @@ public class Canteen extends javax.swing.JFrame {
         
          int RC = 10;
          int results = y * RC;
+         int change = v - results;
+         double Vat = results * 0.12; 
+          JOptionPane.showMessageDialog(null, "Your order: RC"
+                 +"\n Price: P" + RC
+                 + "\nQuantity: " + y
+                 + "\nTotal: P"+ results
+                 + "\nVat: P" + Vat
+                 + "\nchange: P"+change, "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
         
-         JOptionPane.showMessageDialog(null, "Your order is RC P"+results, "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
-        
+         int choice = JOptionPane.showConfirmDialog(null, "do you want to change order", "receipt", JOptionPane.YES_NO_CANCEL_OPTION);
+          
+         if (choice == JOptionPane.YES_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "you can order again", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
+         else if (choice == JOptionPane.NO_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "No More Orders", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
+         else if (choice == JOptionPane.CANCEL_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "CANCELED", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
          txtcash.setText(""+results);
         
         }
@@ -387,10 +524,30 @@ public class Canteen extends javax.swing.JFrame {
          lblorder.setText(" FizzPop ");
         
          int  FizzPop = 10;
-         int results = y *  FizzPop;
+         int results = y *  FizzPop;;
+         int change = v - results;
+         double Vat = results * 0.12; 
+          JOptionPane.showMessageDialog(null, "Your order: FizzPop"
+                 +"\n Price: P" + FizzPop
+                 + "\nQuantity: " + y
+                 + "\nTotal: P"+ results
+                 + "\nVat: P" + Vat
+                 + "\nchange: P"+change, "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
         
-         JOptionPane.showMessageDialog(null, "Your order is  FizzPop P"+results, "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
-        
+         int choice = JOptionPane.showConfirmDialog(null, "do you want to change order", "receipt", JOptionPane.YES_NO_CANCEL_OPTION);
+          
+         if (choice == JOptionPane.YES_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "you can order again", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
+         else if (choice == JOptionPane.NO_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "No More Orders", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
+         else if (choice == JOptionPane.CANCEL_OPTION)
+         {
+         JOptionPane.showMessageDialog(null, "CANCELED", "Receipt", JOptionPane.INFORMATION_MESSAGE);
+         }
          txtcash.setText(""+results);
         
         }
@@ -399,6 +556,10 @@ public class Canteen extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Invalid Selection", "CANTEEN", JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_btnselectActionPerformed
+
+    private void txtcashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcashActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtcashActionPerformed
 
     /**
      * @param args the command line arguments
