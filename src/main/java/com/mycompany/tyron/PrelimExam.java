@@ -75,6 +75,9 @@ public class PrelimExam extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel10.setText("1st Quarter:");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 110, 31));
+
+        txtAvarage.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtAvarage.setEnabled(false);
         getContentPane().add(txtAvarage, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 160, 130, 40));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -86,13 +89,13 @@ public class PrelimExam extends javax.swing.JFrame {
 
     private void btnEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnterActionPerformed
         int num1 = Integer.parseInt(txt1.getText());
-        int num2 = Integer.parseInt(txt1.getText());
-        int num3 = Integer.parseInt(txt1.getText());
-        int num4 = Integer.parseInt(txt1.getText());
+        int num2 = Integer.parseInt(txt2.getText());
+        int num3 = Integer.parseInt(txt3.getText());
+        int num4 = Integer.parseInt(txt4.getText());
         int total = num1 + num2 + num3 + num4;
         float avarage = total / 4;
         
-        if (avarage <= 95 && avarage >= 99)
+        if (avarage <= 99 && avarage >= 95)
         {
         txtAvarage.setText("excellent "+ avarage);
         }
