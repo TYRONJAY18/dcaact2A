@@ -18,19 +18,21 @@ public class midterm_activity {
         System.out.println("CAFETERIA");
         System.out.println("[1] - Snacks");
         System.out.println("[1] = hotdog [25.00]");
-        System.out.println("[2] - Soimai [14.00]");
+        System.out.println("[2] = Soimai [15.00]");
         System.out.println("[2] - Drinks");
-        System.out.println("[1] - Snacks");
-        System.out.println("[1] - Snacks");
+        System.out.println("[1] = Coke [35.00]");
+        System.out.println("[2] = Royal [25.00]");
         //input for choice s/d
         System.out.println("Enter your Choice: ");
-        int choi = input.nextInt();
+        int choose = input.nextInt();
         
         //1st if condition for choid
-        if (choi == 1)
+        if (choose == 1)
         {
-        System.out.println("Snacks");
-        int hot = 25;
+        System.out.println("[1] - Hotdot - P25");
+        System.out.println("[2] - siomai - P15");
+        int hotdog = 25;
+         int siomai = 15;
         System.out.println("Enter your Choice of Snacks:");
         int snacks = input.nextInt();
         
@@ -39,53 +41,109 @@ public class midterm_activity {
         System.out.println("You Choose Hot Dog");
         System.out.println("enter quantity: ");
         int quan = input.nextInt();
-        int quan1 = quan * hot;
+        int quan1 = quan * hotdog;
         System.out.println("sub total:"+ quan1);
         double tax = 0.12;
         double vat = quan1 * tax;
         double total = vat + quan1;
         System.out.println("Total: " + total);
         System.out.println("Enter your Cash: ");
-        int csh = input.nextInt();
-        double change = csh - total;
-        while(csh < total)
+        int cash = input.nextInt();
+        double change = cash - total;
+        while(cash < total)
         {
-        System.out.println("Enter your Cash: ");
-        csh = input.nextInt();
+        System.out.println("Insufficient payment received, please try again!");
+        System.out.println("Enter payment:");
+        cash = input.nextInt();
         }
-        System.out.println("change is: " +change);
+         change = cash - total;
+         System.out.print("Your change is: " + change);
         }
-        }
-        
-        else if (choi == 1)
-        {
-        System.out.println("Snacks");
-        int sio = 15;
-        System.out.println("Enter your Choice of Snacks:");
-        int snacks = input.nextInt();
-        
-        if (snacks == 2)
+        else if(snacks == 2)
         {
         System.out.println("You Choose Siomai");
         System.out.println("enter quantity: ");
         int quan = input.nextInt();
-        int quan1 = quan * sio;
+        int quan1 = quan * siomai;
         System.out.println("sub total:"+ quan1);
         double tax = 0.12;
         double vat = quan1 * tax;
         double total = vat + quan1;
         System.out.println("Total: " + total);
         System.out.println("Enter your Cash: ");
-        int csh = input.nextInt();
-        double change = csh - total;
-        System.out.println("Change is: "+ change);
-        while(csh < total)
+        int cash = input.nextInt();
+        double change = cash - total;
+        while(cash < total)
         {
-        System.out.println("Enter your Cash: ");
-        csh = input.nextInt();
+        System.out.println("Total: " + total);
+        System.out.println("Insufficient payment received, please try again!");
+        System.out.println("Enter payment:");
+        cash = input.nextInt();
         }
-        System.out.println("change is: " +change);
-        }    
-    }
+         change = cash - total;
+         System.out.print("Your change is: " + change);
+        }else {
+            System.out.println("Invalid option");
+            }
+        }else if (choose == 2)
+        {
+        System.out.println("[1] - Coke - P35");
+        System.out.println("[2] - Royal - P25");
+        int coke = 25;
+         int Royal = 25;
+        System.out.println("Enter your Choice:");
+        int drinks = input.nextInt();
+        
+        if (drinks == 1)
+        {
+        System.out.println("You Choose Coke");
+        System.out.println("enter quantity: ");
+        int quan = input.nextInt();
+        int quan1 = quan * coke;
+        System.out.println("sub total:"+ quan1);
+        double tax = 0.12;
+        double vat = quan1 * tax;
+        double total = vat + quan1;
+        System.out.println("Total: " + total);
+        System.out.println("Enter your Cash: ");
+        int cash = input.nextInt();
+        double change = cash - total;
+        while(cash < total)
+        {
+        System.out.println("Insufficient payment received, please try again!");
+        System.out.println("Enter payment:");
+        cash = input.nextInt();
+        }
+         change = cash - total;
+         System.out.print("Your change is: " + change);
+        }
+        else if (drinks == 2)
+        {
+        System.out.println("You Choose Royal");
+        System.out.println("enter quantity: ");
+        int quan = input.nextInt();
+        int quan1 = quan * Royal;
+        System.out.println("sub total:"+ quan1);
+        double tax = 0.12;
+        double vat = quan1 * tax;
+        double total = vat + quan1;
+        System.out.println("Total: " + total);
+        System.out.println("Enter your Cash: ");
+        int cash = input.nextInt();
+        double change = cash - total;
+        while(cash < total)
+        {
+        System.out.println("Insufficient payment received, please try again!");
+        System.out.println("Enter payment:");
+        cash = input.nextInt();
+        }
+         change = cash - total;
+         System.out.print("Your change is: " + change); 
+        } else {
+            System.out.println("Invalid option");
+            }
+    } else {
+            System.out.println("Invalid category");
+        }
 }
 }
