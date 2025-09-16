@@ -3,20 +3,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.tyron;
-import java.util.HashSet;
+import java.util.HashMap;
 /**
  *
  * @author Tyron Jay
  */
 public class hashmap {
-    public static void main(String[] args) {
-		HashSet<String> cars = new HashSet <String>();
-    cars.add("Volvo");
-    cars.add("BMW");
-    cars.add("Ford");
-    cars.add("BMW");  // Duplicate
-    cars.add("Mazda");
-    System.out.println(cars);
-	}
+     public static void main(String[] args) {
+	 // Create a HashMap object called capitalCities
+    HashMap<String, String> capitalCities = new HashMap<String, String>();
 
+    // Add keys and values (Country, City)
+    capitalCities.put("England", "London");
+    capitalCities.put("Germany", "Berlin");
+    capitalCities.put("Norway", "Oslo");
+    capitalCities.put("USA", "Washington DC");
+    System.out.println(capitalCities);
+	}
+SS
 }

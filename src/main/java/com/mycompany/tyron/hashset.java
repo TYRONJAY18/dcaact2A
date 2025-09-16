@@ -7,7 +7,7 @@ import java.util.HashSet;
 
 /**
  *
- * @author Tyron Jay
+ * @author Tyron JaySSSS
  */
 public class hashset {
     public static void main(String[] args) {

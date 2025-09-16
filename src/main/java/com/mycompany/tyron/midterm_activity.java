@@ -57,7 +57,14 @@ public class midterm_activity {
         cash = input.nextInt();
         }
          change = cash - total;
-         System.out.print("Your change is: " + change);
+         System.out.println("Snacks");
+         System.out.println("\nYou Choose Hot Dog");
+         System.out.print("\nAmount: " + hotdog);
+         System.out.print("\nQuantity: " + quan);
+         System.out.print("\nQuantity: " + quan1);
+         System.out.print("\nYour Tax (12): " + vat);
+         System.out.print("\nYour Total is: " + total);
+         System.out.print("\nYour change is: " + change);
         }
         else if(snacks == 2)
         {
@@ -81,7 +88,14 @@ public class midterm_activity {
         cash = input.nextInt();
         }
          change = cash - total;
-         System.out.print("Your change is: " + change);
+         System.out.println("Snacks");
+         System.out.println("\nYou Choose Siomai");
+         System.out.print("\nAmount: " + siomai);
+         System.out.print("\nQuantity: " + quan);
+         System.out.print("\nQuantity: " + quan1);
+         System.out.print("\nYour Tax (12): " + vat);
+         System.out.print("\nYour Total is: " + total);
+         System.out.print("\nYour change is: " + change);
         }else {
             System.out.println("Invalid option");
             }
@@ -115,7 +129,14 @@ public class midterm_activity {
         cash = input.nextInt();
         }
          change = cash - total;
-         System.out.print("Your change is: " + change);
+         System.out.println("Drinks");
+         System.out.println("\nYou Choose Coke");
+         System.out.print("\nAmount: " + coke);
+         System.out.print("\nQuantity: " + quan);
+         System.out.print("\nQuantity: " + quan1);
+         System.out.print("\nYour Tax (12): " + vat);
+         System.out.print("\nYour Total is: " + total);
+         System.out.print("\nYour change is: " + change);
         }
         else if (drinks == 2)
         {
@@ -138,7 +159,14 @@ public class midterm_activity {
         cash = input.nextInt();
         }
          change = cash - total;
-         System.out.print("Your change is: " + change); 
+         System.out.println("Drinks");
+         System.out.println("\nYou Choose Royal");
+         System.out.print("\nAmount: " + Royal);
+         System.out.print("\nQuantity: " + quan);
+         System.out.print("\nQuantity: " + quan1);
+         System.out.print("\nYour Tax (12): " + vat);
+         System.out.print("\nYour Total is: " + total);
+         System.out.print("\nYour change is: " + change); 
         } else {
             System.out.println("Invalid option");
             }
