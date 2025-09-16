@@ -20,5 +20,5 @@ public class hashmap {
     capitalCities.put("USA", "Washington DC");
     System.out.println(capitalCities);
 	}
-SS
+
 }
