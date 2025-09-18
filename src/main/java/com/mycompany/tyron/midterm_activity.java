@@ -4,6 +4,7 @@
  */
 package com.mycompany.tyron;
 import java.util.Scanner;
+import java.util.ArrayList;
 /**
  *
  * @author CL2~PC38
@@ -14,6 +15,7 @@ public class midterm_activity {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        ArrayList<String> reciept = new ArrayList <String>();
         Scanner input = new Scanner(System.in);
         System.out.println("CAFETERIA");
         System.out.println("[1] - Snacks");
@@ -57,14 +59,17 @@ public class midterm_activity {
         cash = input.nextInt();
         }
          change = cash - total;
-         System.out.println("Snacks");
-         System.out.println("\nYou Choose Hot Dog");
-         System.out.print("\nAmount: " + hotdog);
-         System.out.print("\nQuantity: " + quan);
-         System.out.print("\nQuantity: " + quan1);
-         System.out.print("\nYour Tax (12): " + vat);
-         System.out.print("\nYour Total is: " + total);
-         System.out.print("\nYour change is: " + change);
+         reciept.add(
+                 "<<<RECIEPT>>>" +
+                 "\nSnacks" +
+                 "\nYou Choose Hot Dog" +
+                 "\nAmount: " + hotdog +
+                 "\nQuantity: " + quan +
+                 "\nQuantity: " + quan1 +
+                 "\nYour Tax (12): " + vat +
+                 "\nYour Total is: " + total +
+                 "\nYour change is: " + change);
+         System.out.println(reciept);
         }
         else if(snacks == 2)
         {
@@ -88,14 +93,17 @@ public class midterm_activity {
         cash = input.nextInt();
         }
          change = cash - total;
-         System.out.println("Snacks");
-         System.out.println("\nYou Choose Siomai");
-         System.out.print("\nAmount: " + siomai);
-         System.out.print("\nQuantity: " + quan);
-         System.out.print("\nQuantity: " + quan1);
-         System.out.print("\nYour Tax (12): " + vat);
-         System.out.print("\nYour Total is: " + total);
-         System.out.print("\nYour change is: " + change);
+         reciept.add(
+                 "<<<RECIEPT>>>" +
+                 "\nSnacks" +
+                 "\nYou Choose Siomai" +
+                 "\nAmount: " + siomai +
+                 "\nQuantity: " + quan +
+                 "\nQuantity: " + quan1 +
+                 "\nYour Tax (12): " + vat +
+                 "\nYour Total is: " + total +
+                 "\nYour change is: " + change);
+         System.out.println(reciept);
         }else {
             System.out.println("Invalid option");
             }
@@ -129,14 +137,17 @@ public class midterm_activity {
         cash = input.nextInt();
         }
          change = cash - total;
-         System.out.println("Drinks");
-         System.out.println("\nYou Choose Coke");
-         System.out.print("\nAmount: " + coke);
-         System.out.print("\nQuantity: " + quan);
-         System.out.print("\nQuantity: " + quan1);
-         System.out.print("\nYour Tax (12): " + vat);
-         System.out.print("\nYour Total is: " + total);
-         System.out.print("\nYour change is: " + change);
+         reciept.add(
+                 "<<<RECIEPT>>>" +
+                 "\nDrinks" +
+                 "\nYou Choose Coke" +
+                 "\nAmount: " + coke +
+                 "\nQuantity: " + quan +
+                 "\nQuantity: " + quan1 +
+                 "\nYour Tax (12): " + vat +
+                 "\nYour Total is: " + total +
+                 "\nYour change is: " + change);
+         System.out.println(reciept);
         }
         else if (drinks == 2)
         {
@@ -159,19 +170,23 @@ public class midterm_activity {
         cash = input.nextInt();
         }
          change = cash - total;
-         System.out.println("Drinks");
-         System.out.println("\nYou Choose Royal");
-         System.out.print("\nAmount: " + Royal);
-         System.out.print("\nQuantity: " + quan);
-         System.out.print("\nQuantity: " + quan1);
-         System.out.print("\nYour Tax (12): " + vat);
-         System.out.print("\nYour Total is: " + total);
-         System.out.print("\nYour change is: " + change); 
+         reciept.add(
+                 "<<<RECIEPT>>>" +
+                 "\nDrinks" +
+                 "\nYou Choose Royal" +
+                 "\nAmount: " + Royal +
+                 "\nQuantity: " + quan +
+                 "\nQuantity: " + quan1 +
+                 "\nYour Tax (12): " + vat +
+                 "\nYour Total is: " + total +
+                 "\nYour change is: " + change);
+         System.out.println(reciept);
+         
         } else {
             System.out.println("Invalid option");
             }
     } else {
             System.out.println("Invalid category");
-        }
+        }      
 }
 }
